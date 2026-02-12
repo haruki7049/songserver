@@ -10,5 +10,5 @@ get "/" do
 end
 
 get '/:filename' do |filename|
-  send_file "./#{filename}", :filename => filename, :type => 'Application/octet-stream'
+  send_file "./resources/musics/#{filename}", :filename => filename, :type => 'Application/octet-stream'
 end
