@@ -1,6 +1,15 @@
-<h1>File lists</h1>
+<h1>Music lists</h1>
+
+<h2>FLAC list</h2>
 <ul>
-  <% @filenames.each do |item| %>
+  <% @flac_filenames.each do |item| %>
+    <li><%= item %></li>
+  <% end %>
+</ul>
+
+<h2>FLAC list</h2>
+<ul>
+  <% @flac_filenames.each do |item| %>
     <li><%= item %></li>
   <% end %>
 </ul>
