@@ -1,2 +1,4 @@
 resources/musics/*
 !resources/musics/.gitkeep
+resources/zips/*
+!resources/zips/.gitkeep
