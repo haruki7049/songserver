@@ -47,5 +47,5 @@ get "/flac" do
 end
 
 get '/:filename' do |filename|
-  send_file "./resources/musics/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+  send_file "./resources/musics/#{filename}"
 end
