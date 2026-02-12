@@ -26,6 +26,14 @@ get "/" do
   erb :index
 end
 
+get "/mp3" do
+  date = DateTime.now
+  zip_name = "./resources/zips/mp3-files-#{date}.zip"
+  create_zip zip_name, mp3_paths
+
+  send_file zip_name
+end
+
 get "/flac" do
   date = DateTime.now
   zip_name = "./resources/zips/flac-files-#{date}.zip"
