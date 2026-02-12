@@ -27,18 +27,22 @@ get "/" do
 end
 
 get "/mp3" do
-  date = DateTime.now
-  zip_name = "./resources/zips/mp3-files-#{date}.zip"
-  create_zip zip_name, mp3_paths
+  zip_name = "./resources/zips/mp3-files.zip"
+  if File.exist?(zip_name)
+    File.delete(zip_name)
+  end
 
+  create_zip zip_name, mp3_paths
   send_file zip_name
 end
 
 get "/flac" do
-  date = DateTime.now
-  zip_name = "./resources/zips/flac-files-#{date}.zip"
-  create_zip zip_name, flac_paths
+  zip_name = "./resources/zips/flac-files.zip"
+  if File.exist?(zip_name)
+    File.delete(zip_name)
+  end
 
+  create_zip zip_name, flac_paths
   send_file zip_name
 end
 
