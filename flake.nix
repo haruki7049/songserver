@@ -49,6 +49,9 @@
             # Kotlin for Gradle
             programs.ktlint.enable = true;
 
+            # XML
+            programs.xmllint.enable = true;
+
             # GitHub Actions
             programs.actionlint.enable = true;
 
