@@ -33,6 +33,9 @@
             # Java
             programs.google-java-format.enable = true;
 
+            # Kotlin for Gradle
+            programs.ktlint.enable = true;
+
             # GitHub Actions
             programs.actionlint.enable = true;
 
