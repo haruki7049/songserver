@@ -23,6 +23,19 @@
 
       perSystem =
         { pkgs, lib, ... }:
+        let
+          tools.build = [
+            # Compiler, Build tools & Runtime (JVM)
+            pkgs.jdk25
+            pkgs.gradle_9
+          ];
+          tools.lsp = [
+            # LSP
+            pkgs.nil # Nix
+            pkgs.jdt-language-server # Java
+            pkgs.kotlin-language-server # Kotlin
+          ];
+        in
         {
           treefmt = {
             projectRootFile = ".git/config";
@@ -48,16 +61,7 @@
           };
 
           devShells.default = pkgs.mkShell {
-            nativeBuildInputs = [
-              # Compiler, Build tools & Runtime (JVM)
-              pkgs.jdk25
-              pkgs.gradle_9
-
-              # LSP
-              pkgs.nil # Nix
-              pkgs.jdt-language-server # Java
-              pkgs.kotlin-language-server # Kotlin
-            ];
+            nativeBuildInputs = tools.build ++ tools.lsp;
           };
         };
     };
