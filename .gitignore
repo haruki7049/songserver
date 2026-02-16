@@ -1,4 +1,4 @@
-resources/musics/*
-!resources/musics/.gitkeep
-resources/zips/*
-!resources/zips/.gitkeep
+# Nix
+.direnv/
+result*
+result-*
