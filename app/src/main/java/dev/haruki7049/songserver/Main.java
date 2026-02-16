@@ -5,6 +5,7 @@
 package dev.haruki7049.songserver;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
@@ -27,7 +28,9 @@ public class Main implements CommandLineRunner, ExitCodeGenerator {
 
   /** A main function. */
   public static void main(String[] args) {
-    SpringApplication.run(Main.class, args);
+    SpringApplication app = new SpringApplication(Main.class);
+    app.setBannerMode(Banner.Mode.OFF);
+    app.run(args);
   }
 
   @Override
