@@ -53,6 +53,7 @@
               # LSP
               pkgs.nil # Nix
               pkgs.jdt-language-server # Java
+              pkgs.kotlin-language-server # Kotlin
             ];
           };
         };
