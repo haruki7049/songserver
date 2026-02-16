@@ -25,6 +25,7 @@ public class Cli implements Callable<Integer> {
 
   @Override
   public Integer call() throws Exception {
+    Runner.run();
     return 0;
   }
 }
