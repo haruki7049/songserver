@@ -10,6 +10,7 @@ plugins {
     id("application")
     id("checkstyle")
     alias(libs.plugins.shadow)
+    alias(libs.plugins.springboot)
 }
 
 repositories {
@@ -24,6 +25,7 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
     implementation(libs.picocli)
+    implementation(libs.springboot)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -33,9 +35,11 @@ java {
     }
 }
 
+group = "dev.haruki7049.songserver"
+
 application {
     // Define the main class for the application.
-    mainClass = "dev.haruki7049.songserver.App"
+    mainClass = "dev.haruki7049.songserver.Main"
 }
 
 checkstyle {
