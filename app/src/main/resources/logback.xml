@@ -10,5 +10,7 @@
     <appender-ref ref="CONSOLE"/>
   </root>
   <!-- Your application's logs -->
-  <logger name="dev.haruki7049.songserver" level="WARN"/>
+  <logger name="dev.haruki7049.songserver" level="ERROR"/>
+  <logger name="org.springframework" level="ERROR"/>
+  <logger name="org.springframework.boot" level="ERROR"/>
 </configuration>
