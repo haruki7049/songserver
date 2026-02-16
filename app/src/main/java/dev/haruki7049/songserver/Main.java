@@ -4,11 +4,21 @@
 
 package dev.haruki7049.songserver;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /** Main class which includes a entry point. */
-public class Main {
+@SpringBootApplication
+public class Main implements CommandLineRunner {
 
   /** A main function. */
   public static void main(String[] args) {
-    System.exit(0);
+    SpringApplication.run(Main.class, args);
+  }
+
+  @Override
+  public void run(String... args) {
+    System.out.println("Hello world~");
   }
 }
