@@ -4,10 +4,12 @@
 
 pkgs.mkShell {
   nativeBuildInputs = [
-    # Runtime
-    (pkgs.ruby.withPackages (ps: [ ps.sinatra ps.rackup ps.puma ps.rubyzip ]))
+    # Compiler, Build tools & Runtime (JVM)
+    pkgs.jdk25
+    pkgs.gradle_9
 
     # LSP
     pkgs.nil # Nix
+    pkgs.jdt-language-server # Java
   ];
 }
