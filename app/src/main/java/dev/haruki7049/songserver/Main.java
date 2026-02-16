@@ -4,13 +4,26 @@
 
 package dev.haruki7049.songserver;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import picocli.CommandLine;
+import picocli.CommandLine.IFactory;
 
 /** Main class which includes a entry point. */
 @SpringBootApplication
-public class Main implements CommandLineRunner {
+public class Main implements CommandLineRunner, ExitCodeGenerator {
+  private int exitCode;
+  @Autowired private Cli cli;
+  @Autowired private final IFactory factory;
+
+  /** A Main class's comstructor. */
+  public Main(Cli cli, IFactory factory) {
+    this.cli = cli;
+    this.factory = factory;
+  }
 
   /** A main function. */
   public static void main(String[] args) {
@@ -19,6 +32,11 @@ public class Main implements CommandLineRunner {
 
   @Override
   public void run(String... args) {
-    System.out.println("Hello world~");
+    this.exitCode = new CommandLine(cli, factory).execute(args);
+  }
+
+  @Override
+  public int getExitCode() {
+    return this.exitCode;
   }
 }

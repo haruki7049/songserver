@@ -6,10 +6,12 @@ junit = "4.13.2"
 shadow = "9.3.1"
 spring_boot_plugin = "4.0.2"
 spring_boot_starter = "4.0.2"
+picocli_spring_boot_starter = "4.7.7"
 
 [libraries]
 junit = { module = "junit:junit", version.ref = "junit" }
 spring_boot_starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "spring.boot.starter" }
+picocli_spring_boot_starter = { module = "info.picocli:picocli-spring-boot-starter", version.ref = "picocli.spring.boot.starter" }
 
 [plugins]
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
