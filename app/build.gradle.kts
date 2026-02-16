@@ -10,7 +10,6 @@ plugins {
     id("application")
     id("checkstyle")
     alias(libs.plugins.shadow)
-    alias(libs.plugins.spring.boot)
 }
 
 repositories {
@@ -25,7 +24,6 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
     implementation(libs.picocli)
-    implementation(libs.spring.boot)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
