@@ -24,6 +24,7 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.guava)
     implementation(libs.picocli)
+    implementation(libs.minum)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
