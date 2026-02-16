@@ -4,11 +4,14 @@
 
 package dev.haruki7049.songserver;
 
+import picocli.CommandLine;
+
 /** Main class which includes a entry point. */
 public class App {
 
   /** A main function. */
   public static void main(String[] args) {
-    System.out.println("Hello world!!");
+    CommandLine cli = new CommandLine(new Cli());
+    System.exit(cli.execute(args));
   }
 }
