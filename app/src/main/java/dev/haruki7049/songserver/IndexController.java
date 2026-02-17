@@ -6,10 +6,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 /** A Rest Controller. */
 @Controller
+@RequestMapping("/")
 public class IndexController {
 
   /** A index function. */
-  @RequestMapping("/")
   public ModelAndView index() {
     ModelAndView model = new ModelAndView();
     model.setViewName("index");
