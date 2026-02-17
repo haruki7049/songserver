@@ -9,7 +9,6 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id("application")
     id("checkstyle")
-    alias(libs.plugins.shadow)
     alias(libs.plugins.spring.boot.plugin)
 }
 
@@ -25,7 +24,6 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.spring.boot.starter)
     implementation(libs.spring.boot.starter.web)
-    implementation(libs.picocli.spring.boot.starter)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
