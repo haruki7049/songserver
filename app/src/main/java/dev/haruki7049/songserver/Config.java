@@ -4,6 +4,4 @@ import org.springframework.context.annotation.Configuration;
 
 /** A Configuration class. */
 @Configuration
-public class Config {
-  
-}
+public class Config {}
