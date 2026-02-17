@@ -10,9 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class IndexController {
 
   /** A index function. */
-  public ModelAndView index() {
-    ModelAndView model = new ModelAndView();
-    model.setViewName("index");
-    return model;
+  public ModelAndView index(ModelAndView modelAndView) {
+    modelAndView.setViewName("index");
+    return modelAndView;
   }
 }
