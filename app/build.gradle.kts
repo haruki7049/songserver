@@ -24,6 +24,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.spring.boot.starter)
+    implementation(libs.spring.boot.starter.web)
     implementation(libs.picocli.spring.boot.starter)
 }
 

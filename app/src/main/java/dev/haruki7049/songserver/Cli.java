@@ -17,7 +17,6 @@ public class Cli implements Callable<Integer> {
 
   @Override
   public Integer call() {
-    System.out.println("Hello, haruki");
     return 0;
   }
 }
