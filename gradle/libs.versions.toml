@@ -6,11 +6,13 @@ junit = "4.13.2"
 spring_boot_plugin = "4.0.2"
 spring_boot_starter = "4.0.2"
 spring_boot_starter_web = "4.0.2"
+spring_boot_starter_thymeleaf = "4.0.2"
 
 [libraries]
 junit = { module = "junit:junit", version.ref = "junit" }
 spring_boot_starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "spring.boot.starter" }
 spring_boot_starter_web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring.boot.starter.web" }
+spring_boot_starter_thymeleaf = { module = "org.springframework.boot:spring-boot-starter-thymeleaf", version.ref = "spring.boot.starter.thymeleaf" }
 
 [plugins]
 spring_boot_plugin = { id = "org.springframework.boot", version.ref = "spring.boot.plugin" }

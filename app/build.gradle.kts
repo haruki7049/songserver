@@ -24,6 +24,7 @@ dependencies {
     // This dependency is used by the application.
     implementation(libs.spring.boot.starter)
     implementation(libs.spring.boot.starter.web)
+    implementation(libs.spring.boot.starter.thymeleaf)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
